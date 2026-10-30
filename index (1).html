@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Final AWS Cloud Deployment Project by Raghul A.">
+<title>Final AWS Cloud Deployment Project</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f7fc;color:#172033;line-height:1.65}
+header{background:#10243e;color:white;padding:18px 6%}header span{color:#38bdf8}
+.hero{padding:76px 6%;color:white;background:linear-gradient(120deg,#10243e,#15558b,#087e9b)}
+.tag{display:inline-block;border:1px solid #ffffff80;border-radius:20px;padding:5px 12px;font-size:.85rem}
+h1{font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.15;margin:20px 0 12px}.hero p{max-width:720px;color:#e0efff}
+main{width:min(1080px,90%);margin:auto}section{padding:45px 0}h2{color:#10243e;margin-top:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid #e2e8f0;border-radius:14px;padding:22px;box-shadow:0 8px 22px #10243e0b}
+.card p,li{color:#64748b}.icon{font-size:1.5rem}.architecture{background:#0d1b2e;color:#e5f1ff;border-radius:14px;padding:25px;text-align:center}
+.node{display:inline-block;min-width:220px;padding:10px 15px;background:#183654;border:1px solid #60a5fa;border-radius:9px;font-weight:bold}.arrow{color:#7dd3fc}
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.step{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px}
+.note{background:#fff8e8;border-left:4px solid #e5a000;padding:14px 17px;border-radius:8px;color:#72510a}
+footer{background:#09172a;color:#c5d2e0;text-align:center;padding:22px;margin-top:30px}
+@media(max-width:720px){.grid,.steps{grid-template-columns:1fr}.hero{padding:58px 6%}}
+</style>
+</head>
+<body>
+<header><strong>FINAL <span>AWS CLOUD PROJECT</span></strong></header>
+<div class="hero"><span class="tag">MODULE 07 · DAY 28–DAY 30</span>
+<h1>Final AWS Cloud Deployment Project</h1>
+<p>A demonstration project showing how a static website and a serverless API can be deployed using AWS cloud services, with security and monitoring considerations.</p></div>
+<main>
+<section><h2>Project Overview</h2><div class="grid">
+<article class="card"><div class="icon">🪣</div><h3>Amazon S3</h3><p>Host the static website files and store project assets in an S3 bucket.</p></article>
+<article class="card"><div class="icon">⚡</div><h3>AWS Lambda</h3><p>Run backend application code on demand without managing servers.</p></article>
+<article class="card"><div class="icon">🔗</div><h3>API Gateway</h3><p>Provide an HTTP endpoint that invokes the Lambda function.</p></article>
+<article class="card"><div class="icon">🔐</div><h3>AWS IAM</h3><p>Use roles and least-privilege permissions to control access.</p></article>
+<article class="card"><div class="icon">📊</div><h3>CloudWatch</h3><p>Collect Lambda logs and monitor function activity.</p></article>
+<article class="card"><div class="icon">☁️</div><h3>Cloud Deployment</h3><p>Separate frontend hosting from backend API execution.</p></article>
+</div></section>
+<section><h2>AWS Architecture</h2><p>High-level architecture for the sample deployment.</p><div class="architecture">
+<div class="node">User / Web Browser</div><div class="arrow">↓</div>
+<div class="node">Amazon S3 – Static Website</div><div class="arrow">↓ API request</div>
+<div class="node">Amazon API Gateway</div><div class="arrow">↓ Invoke</div>
+<div class="node">AWS Lambda Function</div><div class="arrow">↓ Logs</div>
+<div class="node">Amazon CloudWatch</div>
+</div></section>
+<section><h2>Implementation Workflow</h2><div class="steps">
+<div class="step"><b>1. Prepare the website</b><p>Review the HTML files in the website folder.</p></div>
+<div class="step"><b>2. Create an S3 bucket</b><p>Upload website files and configure static website hosting or use a suitable secure hosting setup.</p></div>
+<div class="step"><b>3. Create a Lambda function</b><p>Use the sample Python handler in the lambda folder.</p></div>
+<div class="step"><b>4. Configure API Gateway</b><p>Create an HTTP API route and connect it to the Lambda function.</p></div>
+<div class="step"><b>5. Apply IAM permissions</b><p>Use least-privilege roles and avoid public access to backend resources.</p></div>
+<div class="step"><b>6. Monitor and test</b><p>Test the website and API endpoint; review execution logs in CloudWatch.</p></div>
+</div><p class="note"><b>Important:</b> This repository contains starter code and deployment documentation. It does not create AWS resources automatically. Configure services in your AWS account, review pricing, and follow AWS security guidance before making resources public.</p></section>
+<section><h2>Project Learning Outcomes</h2><div class="card"><ul>
+<li>Build and prepare a cloud-based application.</li><li>Understand how S3, Lambda, and API Gateway work together.</li>
+<li>Apply IAM roles and least-privilege permissions.</li><li>Understand basic CloudWatch logging and monitoring.</li>
+<li>Document cloud architecture and deployment steps.</li>
+</ul></div></section>
+<section><div class="card"><h2>Project Information</h2><p><b>Intern:</b> Raghul A.</p><p><b>Organization:</b> Codomax Digital Solutions</p><p><b>Program:</b> AWS Cloud & DevOps Internship</p><p><b>Module:</b> 07 – Final AWS Cloud Deployment Project</p></div></section>
+</main>
+<footer>© 2026 Raghul A. · Final AWS Cloud Deployment Project</footer>
+</body></html>
